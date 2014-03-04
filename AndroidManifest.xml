@@ -16,6 +16,12 @@
       </intent-filter>
     </activity>
 
+    <activity android:name=".application.QRActivity"
+      android:label="@string/qr_title">
+      <intent-filter>
+      </intent-filter>
+    </activity>
+
     <activity android:name=".application.SearchResultsActivity"
       android:label="@string/search_results_title">
       <intent-filter>
