@@ -5,9 +5,8 @@
     android:layout_height="fill_parent"
     >
 
-<TextView
-    android:id="@+id/qr_string"
-    android:text="My AWeSome QR CODE"
+<ImageView
+    android:id="@+id/qr_code"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="16dp"
