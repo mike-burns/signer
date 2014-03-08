@@ -1,4 +1,6 @@
-package com.trusthoarder.signer;
+package com.trusthoarder.signer.application;
+
+import com.trusthoarder.signer.R;
 
 import android.app.Activity;
 import android.os.Bundle;
