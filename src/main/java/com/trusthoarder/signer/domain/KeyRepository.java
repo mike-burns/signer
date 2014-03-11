@@ -42,7 +42,8 @@ public class KeyRepository
 
     HttpResponse response = client.execute( req );
 
-    PGPObjectFactory factory = new PGPObjectFactory( PGPUtil.getDecoderStream( response.getEntity().getContent() ));
+    PGPObjectFactory factory = new PGPObjectFactory(
+        PGPUtil.getDecoderStream( response.getEntity().getContent() ));
     for(Object obj = factory.nextObject(); obj != null; obj = factory.nextObject()) {
       if(obj instanceof PGPPublicKeyRing ) {
         return some( new PublicKey( (PGPPublicKeyRing) obj ) );

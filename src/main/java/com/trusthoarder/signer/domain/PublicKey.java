@@ -3,7 +3,8 @@ package com.trusthoarder.signer.domain;
 import com.trusthoarder.signer.infrastructure.Strings;
 import org.spongycastle.openpgp.PGPPublicKeyRing;
 
-/** The domain layer mapping of a public PGP key. Backed by a regular bouncy castle PGPPublicKeyRing. */
+/** The domain layer mapping of a public PGP key. Backed by a regular
+ * bouncy castle PGPPublicKeyRing. */
 public class PublicKey extends PublicKeyMeta {
 
   private final PGPPublicKeyRing rawKeyRing;

@@ -21,10 +21,10 @@ public class PGPMachineFormatReader {
         if ( currentKey != null ) {
           keys.add( currentKey );
         }
+        String keyId = parts[1];
         currentKey = new PublicKeyMeta(
-          Long.decode( String.format( "#%s", parts[1] ) ),
-          // Default to keyId as friendly name.
-          parts[1] );
+          Long.decode( String.format( "#%s", keyId ) ),
+          /* friendlyName: */ keyId );
       }
       else if ( type.equals( "uid" ) && currentKey != null ) {
         currentKey = new PublicKeyMeta( currentKey.keyId(), parts[1] );
@@ -43,6 +43,4 @@ public class PGPMachineFormatReader {
   private int parseInt( String part ) {
     return part == null || part.length() == 0 ? -1 : Integer.parseInt( part );
   }
-
-
 }
