@@ -22,8 +22,7 @@ public class KeyActivity extends Activity {
   }
 
   public void approve(View view) {
-    TextView message = new TextView(this);
-    message.setText("Approved");
-    setContentView(message);
+    Intent intent = new Intent(this, QRActivity.class);
+    startActivity(intent);
   }
 }
